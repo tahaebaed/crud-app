@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { TableContainer, TableData, TableRow } from '../../styles/DataShown'
 import MainContent from './MainContent'
 import UpdateData from './UpdateData'
 
 const DataTable = () => {
   const { elements } = useSelector(store => store.elements)
-  const dispatch = useDispatch()
   const [selected, setSelected] = useState('')
   const [query, setQuery] = useState('')
   return (
